@@ -43,7 +43,7 @@ defmodule AuthApiWeb.Endpoint do
     key: "_auth_api_key",
     signing_salt: "77aue2Mc"
 
- # enable Pow session based authentication
+  # enable Pow session based authentication
   plug Pow.Plug.Session, otp_app: :auth_api
   plug PowPersistentSession.Plug.Cookie
   plug AuthApiWeb.Router

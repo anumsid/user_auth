@@ -19,12 +19,12 @@ config :auth_api, AuthApiWeb.Endpoint,
 
 # Pow configuration
 config :auth_api, :pow,
-user: AuthApi.Users.User,
-repo: AuthApi.Repo,
-web_module: AuthApiWeb,
-extensions: [PowPersistentSession, PowResetPassword, PowEmailConfirmation],
-controller_callbacks: Pow.Extension.Phoenix.ControllerCallbacks,
-mailer_backend: AuthApiWeb.Pow.Mailer
+  user: AuthApi.Users.User,
+  repo: AuthApi.Repo,
+  web_module: AuthApiWeb,
+  extensions: [PowPersistentSession, PowResetPassword, PowEmailConfirmation],
+  controller_callbacks: Pow.Extension.Phoenix.ControllerCallbacks,
+  mailer_backend: AuthApiWeb.Pow.Mailer
 
 # Configures Elixir's Logger
 config :logger, :console,

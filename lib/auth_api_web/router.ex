@@ -3,7 +3,6 @@ defmodule AuthApiWeb.Router do
   use Pow.Phoenix.Router
   use Pow.Extension.Phoenix.Router, otp_app: :auth_api
 
-
   pipeline :browser do
     plug :accepts, ["html"]
     plug :fetch_session
@@ -19,7 +18,7 @@ defmodule AuthApiWeb.Router do
   # BEGIN added for Pow
   pipeline :protected do
     plug Pow.Plug.RequireAuthenticated,
-    error_handler: Pow.Phoenix.PlugErrorHandler
+      error_handler: Pow.Phoenix.PlugErrorHandler
   end
 
   scope "/" do
@@ -33,12 +32,12 @@ defmodule AuthApiWeb.Router do
     pipe_through [:browser, :protected]
     resources "/products", ProductController
   end
+
   # END added for Pow
 
   scope "/", AuthApiWeb do
     pipe_through :browser
 
     get "/", PageController, :index
-   
   end
 end

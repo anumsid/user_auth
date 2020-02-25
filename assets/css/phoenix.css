@@ -60,8 +60,8 @@ select {
   display: block;
   margin: -1rem 0 2rem;
 }
-
-/* Phoenix promo and logo */
+/* 
+Phoenix promo and logo
 .phx-hero {
   text-align: center;
   border-bottom: 1px solid #e3e3e3;
@@ -83,7 +83,7 @@ select {
 .phx-logo img {
   width: auto;
   display: block;
-}
+} */
 
 /* Headers */
 header {
